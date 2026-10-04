@@ -1,0 +1,14 @@
+{
+  "templates": [
+    { "label": "加一个退出登录按钮", "category": "feature", "phase": "explore", "skill": "/plobi-explore" },
+    { "label": "修复登录崩溃问题", "category": "bugfix", "phase": "debug", "skill": "/plobi-dissect" },
+    { "label": "探索用户权限系统", "category": "explore", "phase": "explore", "skill": "/plobi-explore" },
+    { "label": "添加暗色主题切换", "category": "feature", "phase": "explore", "skill": "/plobi-explore" },
+    { "label": "优化页面加载速度", "category": "refactor", "phase": "code", "skill": "/plobi-fuse" },
+    { "label": "研究竞品的用户流程", "category": "explore", "phase": "explore", "skill": "/plobi-recon" },
+    { "label": "修复表单提交后白屏", "category": "bugfix", "phase": "debug", "skill": "/plobi-dissect" },
+    { "label": "重构状态管理架构", "category": "refactor", "phase": "code", "skill": "/plobi-fuse" },
+    { "label": "添加数据导出功能", "category": "feature", "phase": "explore", "skill": "/plobi-explore" },
+    { "label": "调查内存泄漏问题", "category": "bugfix", "phase": "debug", "skill": "/plobi-dissect" }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "skills",
+  "skills": [
+    "./skills/1-alignment/plobi-explore",
+    "./skills/1-alignment/plobi-grill",
+    "./skills/1-alignment/plobi-recon",
+    "./skills/1-alignment/plobi-synthesize",
+    "./skills/1-alignment/plobi-slice",
+    "./skills/2-surgery/plobi-dissect",
+    "./skills/2-surgery/plobi-fuse",
+    "./skills/2-surgery/plobi-map",
+    "./skills/3-defense/plobi-freeze",
+    "./skills/3-defense/plobi-guard",
+    "./skills/4-compression/plobi-compress",
+    "./skills/4-compression/plobi-package",
+    "./skills/5-infrastructure/plobi-design",
+    "./skills/5-infrastructure/plobi-scaffold",
+    "./skills/5-infrastructure/plobi-tidy",
+    "./skills/5-infrastructure/plobi-forge"
+  ]
+}

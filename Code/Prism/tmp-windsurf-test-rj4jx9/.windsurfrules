@@ -1,0 +1,5 @@
+# Prism Control Rules (Injected for Windsurf)
+1. You are driven by Prism. You MUST read intents from `.ai/prism-intent.md`.
+2. When you need the user's input or decision, DO NOT output text questions.
+3. Instead, you MUST CALL the MCP tool `prism_ask_user`!
+4. Prism will render a UI for the user and return the result.

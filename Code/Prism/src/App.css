@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Prism Morandi Color System — CSS Variables
+   Zero emoji. Monochrome palette. Strict typographic restraint.
+--------------------------------------------------------------------------- */
+
+:root {
+  /* Background layers — cool gray tones */
+  --bg-base:        #1A1D23;
+  --bg-surface:     #22262E;
+  --bg-overlay:     #2A2F38;
+  --bg-hover:       #323842;
+
+  /* Borders */
+  --border-default: #3D4450;
+  --border-subtle:  #2A2F38;
+
+  /* Text — low contrast but readable */
+  --text-primary:   #D4D8E0;
+  --text-secondary: #8B92A0;
+  --text-muted:     #6B7280;
+
+  /* Accent colors — Morandi low saturation */
+  --accent-blue:    #5B7A9D;
+  --accent-teal:    #5E8E83;
+  --accent-amber:   #9D8656;
+  --accent-rose:    #7A4F5A;
+
+  /* Status colors */
+  --status-active:  #5E8E83;
+  --status-pending: #9D8656;
+  --status-error:   #7A4F5A;
+  --status-locked:  #5A6170;
+
+  /* Console Tray log colors */
+  --log-system:     #8B92A0;
+  --log-ok:         #5E8E83;
+  --log-warn:       #9D8656;
+  --log-helm:       #5B7A9D;
+  --log-doc:        #5A6170;
+}
+
+/* ---------------------------------------------------------------------------
+   prism-md — Muted Industrial Markdown typography for the Inspector panel
+   Zero emoji. Monochrome palette. Strict typographic restraint.
+--------------------------------------------------------------------------- */
+
+.prism-md {
+  font-size: 0.8125rem;      /* 13px */
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+/* Headings */
+.prism-md h1,
+.prism-md h2,
+.prism-md h3,
+.prism-md h4 {
+  font-family: ui-monospace, "Cascadia Code", "Fira Code", monospace;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 1.25em;
+  margin-bottom: 0.4em;
+  color: var(--text-primary);
+}
+
+.prism-md h1 { font-size: 1rem; }
+.prism-md h2 { font-size: 0.875rem; border-bottom: 1px solid var(--border-default); padding-bottom: 0.25em; }
+.prism-md h3 { font-size: 0.8125rem; }
+.prism-md h4 { font-size: 0.75rem; }
+
+/* Paragraphs & lists */
+.prism-md p     { margin-top: 0; margin-bottom: 0.6em; }
+.prism-md ul,
+.prism-md ol    { padding-left: 1.25em; margin-bottom: 0.6em; }
+.prism-md li    { margin-bottom: 0.2em; }
+.prism-md li > p { margin: 0; }
+
+/* Inline code */
+.prism-md code {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.75rem;
+  background: var(--bg-base);
+  border: 1px solid var(--border-default);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  color: var(--text-secondary);
+}
+
+/* Code blocks */
+.prism-md pre {
+  background: var(--bg-base);
+  border: 1px solid var(--border-default);
+  border-radius: 6px;
+  padding: 0.75em 1em;
+  overflow-x: auto;
+  margin-bottom: 0.75em;
+}
+.prism-md pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: 0.75rem;
+}
+
+/* Blockquote */
+.prism-md blockquote {
+  border-left: 2px solid var(--border-default);
+  padding-left: 0.75em;
+  margin: 0 0 0.6em 0;
+  color: var(--text-muted);
+}
+
+/* Horizontal rule */
+.prism-md hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 1em 0;
+}
+
+/* GFM Tables */
+.prism-md table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  margin-bottom: 0.75em;
+}
+.prism-md th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.35em 0.6em;
+  background: var(--bg-base);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.prism-md td {
+  padding: 0.35em 0.6em;
+  border: 1px solid var(--border-default);
+  vertical-align: top;
+}
+
+/* Links */
+.prism-md a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prism-md a:hover { color: var(--text-primary); }
+
+/* Strong / Em */
+.prism-md strong { font-weight: 600; color: var(--text-primary); }
+.prism-md em { font-style: italic; color: var(--text-secondary); }
+
+/* ---------------------------------------------------------------------------
+   Skeleton shimmer animation
+--------------------------------------------------------------------------- */
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface) 25%,
+    var(--bg-hover)   50%,
+    var(--bg-surface) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ---------------------------------------------------------------------------
+   DocCard file-change highlight bar
+--------------------------------------------------------------------------- */
+
+@keyframes fade-highlight {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.doc-card-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--status-active);
+  border-radius: 9999px 9999px 0 0;
+  animation: fade-highlight 2s ease-out forwards;
+  pointer-events: none;
+}

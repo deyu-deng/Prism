@@ -1,0 +1,29 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# 构建产物
+dist/
+dist-electron/
+out/
+build/
+release/
+
+# AI 工具本地配置与会话
+.ai/
+.antigravity/
+.claude/
+.windsurf/
+
+# 系统与编辑器
+.DS_Store
+*.log
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 旧 Helm 独立仓库残留（已并入 Prism）
+Code/Helm/.git-removed/
